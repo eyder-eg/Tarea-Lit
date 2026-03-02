@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "lit": "^3.3.2",
+    "vite": "^6.0.0"
+  }
+}
