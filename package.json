@@ -1,9 +1,30 @@
 {
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "test": "npx karma start karma.conf.js"
   },
   "dependencies": {
     "lit": "^3.3.2",
     "vite": "^6.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.0",
+    "@open-wc/testing": "^4.0.0",
+    "@web/test-runner": "^0.20.2",
+    "babel-loader": "^10.1.1",
+    "babel-plugin-istanbul": "^7.0.1",
+    "chai": "^6.2.2",
+    "karma": "^6.4.4",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-coverage": "^2.2.1",
+    "karma-mocha": "^2.0.1",
+    "karma-sinon": "^1.0.5",
+    "karma-webpack": "^5.0.1",
+    "mocha": "^11.7.5",
+    "process": "^0.11.10",
+    "sinon": "^21.0.2",
+    "stream-browserify": "^3.0.0",
+    "webpack": "^5.105.4"
   }
 }

@@ -5,6 +5,10 @@ const styles = css`
     font-family: var(--font-family);
   }
 
+  h2 {
+    margin: 0;
+  }
+
   button {
     background-color: #83fa87;
     border: 0;
@@ -17,7 +21,12 @@ const styles = css`
     padding: 0.5rem;
     border: 1px solid #ccc;
   }
-  
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 `;
 
 export default styles;

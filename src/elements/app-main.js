@@ -4,14 +4,14 @@ import "./app-list.js";
 import "./app-add-item.js";
 import { CONSTANTS } from "../utils/constants.js";
 
-class AppMain extends LitElement {
+export class AppMain extends LitElement {
   static properties = {
     list: { type: Array },
   };
   constructor() {
     super();
     
-    this.list = [...CONSTANTS.list_test];
+    this.list = [...CONSTANTS.TEST_TASKS];
   }
 
   _handleAddItem(e) {

@@ -31,7 +31,7 @@ class AppAddItem extends LitElement {
 
   _addItem(e) {
     e.preventDefault();
-    if (!this.title && !this.description) return alert("Uno de los campos está vacío");
+    if (this.title === "" || this.description === "") return alert("Uno de los campos está vacío");
     this.dispatchEvent(
       new CustomEvent("add-item", {
         detail: {
@@ -48,6 +48,8 @@ class AppAddItem extends LitElement {
     this.modal.close();
     this.inputTitle.value = "";
     this.inputDescription.value = "";
+    this.title = "";
+    this.description = "";
   }
 
   render() {
@@ -55,6 +57,7 @@ class AppAddItem extends LitElement {
       <button @click=${this._openModal}>+ Añadir Tarea</button>
       <dialog id="modal">
         <form>
+          <h2>Agregar nueva tarea</h2>
           <input
             id="inputTitle"
             placeholder="Título"
@@ -76,7 +79,7 @@ class AppAddItem extends LitElement {
   }
 
   get inputDescription() {
-    return this.shadowRoot.getElementById("inputTitle");
+    return this.shadowRoot.getElementById("inputDescription");
   }
 
   get modal() {
